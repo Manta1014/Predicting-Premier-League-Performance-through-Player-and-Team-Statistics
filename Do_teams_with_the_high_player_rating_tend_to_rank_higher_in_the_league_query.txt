@@ -1,0 +1,14 @@
+WITH team_ratings AS (
+    SELECT
+        r.Team,
+        ROUND(AVG(r."FotMob Rating"), 2) AS avg_rating
+    FROM player_player_ratings r
+    GROUP BY r.Team
+)
+SELECT 
+    t.name AS Team,
+    t.pts,
+    team_ratings.avg_rating
+FROM pl_table_2023_24 t
+JOIN team_ratings ON t.name = team_ratings.Team
+ORDER BY t.pts DESC;

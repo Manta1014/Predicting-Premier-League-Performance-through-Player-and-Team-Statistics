@@ -1,0 +1,13 @@
+WITH xg_possession AS(
+    SELECT
+        xg.Team,
+        ROUND(SUM(xg."Expected Goals (xG)"), 1) AS total_xg,
+        ROUND(AVG(pos."Possession (%)"), 1) AS avg_possession
+    FROM player_expected_goals xg
+    JOIN possession_percentage_team pos ON xg.Team = pos.Team
+    GROUP BY xg.Team
+)
+SELECT *
+FROM xg_possession
+ORDER BY total_xg DESC, avg_possession DESC
+LIMIT 10;

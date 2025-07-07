@@ -1,0 +1,15 @@
+SELECT
+    p."Team",
+    p."player",
+    p."Goals",
+    t.pts,
+    t.goalConDiff
+FROM player_top_scorers p
+JOIN pl_table_2023_24 t
+    ON p."team" = t.name
+WHERE p."Goals" = (
+    SELECT MAX(p2."Goals")
+    FROM player_top_scorers p2
+    WHERE p2."Team" = p."Team"
+)
+ORDER BY t.idx;

@@ -1,0 +1,12 @@
+WITH goal_efficiency AS (
+    SELECT
+        "Player", "Team",
+        "Actual Goals",
+        "Expected Goals (xG)",
+        ROUND("Actual Goals" - "Expected Goals (xG)", 2) AS difference
+    FROM player_expected_goals
+)
+SELECT *
+FROM goal_efficiency
+ORDER BY difference DESC
+LIMIT 10;

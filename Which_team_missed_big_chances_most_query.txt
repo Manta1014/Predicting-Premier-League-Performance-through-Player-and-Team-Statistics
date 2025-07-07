@@ -1,0 +1,7 @@
+SELECT
+    p.Team,
+    COUNT(*) AS missed_chances
+FROM player_big_chances_missed p
+GROUP BY p.Team
+HAVING missed_chances > 5
+ORDER BY missed_chances DESC;
