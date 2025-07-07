@@ -95,7 +95,8 @@ Combines xG and possession to rank teams most likely to succeed.
 
 ---
 
-## 📂 File Structure (Suggested)
+## 📂 File Structure
+
 SQL-PremierLeague-Analysis/
 ├── queries/
 ├── results/
