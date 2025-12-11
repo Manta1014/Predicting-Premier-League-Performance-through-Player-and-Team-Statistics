@@ -4,7 +4,6 @@ This repository presents a SQL-based data analytics project that explores team a
 We use normalized relational databases and advanced SQL techniques to examine the connection between individual statistics and overall team success, aiming to identify key predictors of league performance.
 
 👉 **[Research Paper (PDF)](https://github.com/Manta1014/Predicting-Premier-League-Performance-through-Player-and-Team-Statistics/blob/main/Research%20Paper_Jinuk%20Seo_Wonjune%20Lee.pdf)**  
-👉 **[Final Presentation Slides](https://github.com/Manta1014/Predicting-Premier-League-Performance-through-Player-and-Team-Statistics/blob/main/Cds%20302%20final%20ppt.pptx)**  
 
 ---
 
